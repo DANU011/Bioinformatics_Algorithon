@@ -1,0 +1,40 @@
+#%%
+# 5.1.simple_seqrecord_object_example_1 / Seq 객체에서 SeqRecord 객체 생성하기
+
+from Bio.Seq import Seq
+from Bio.SeqRecord import SeqRecord
+
+seq = Seq('ACGT') # Sequence 객체 생성
+seqrecord = SeqRecord(seq) # SeqRecord 객체 생성
+
+print(seqrecord)
+#%%
+# 5.1.simple_seqrecord_object_exmaple_2 / SeqRecord 객체 생성 초기값 넣기
+simple_seq = seq
+simple_seqRecord = SeqRecord(simple_seq, id='NC_1111', name = 'test') # SeqRecord 객체를 만들 때 name, id 지정
+
+print(simple_seqRecord)
+#%%
+# 5.1.simple_seqrecord_object_exmaple_3 / SeqRecord 객체 생성 후 속성값 변경하기
+simple_seq = seq
+simple_seqRecord = SeqRecord(simple_seq, id='NC_1111', name = 'test') # SeqRecord 객체를 만들 때 name, id 지정
+simple_seqRecord.name = 'Another name'
+
+print(simple_seqRecord)
+#%%
+ # 5.3.1.seqRecord_example / 문자열로부터 SeqRecord 객체 만들기
+
+seq = seq
+SeqRecord = SeqRecord(seq)
+print(SeqRecord)
+print('-----------------')
+
+# 객체 설명 추가
+SeqRecord.id = 'NC_1111'
+SeqRecord.name = 'GeneA'
+SeqRecord.description = 'This is a description'
+SeqRecord.annotations['Annotation_Key1'] = 'Annotation_Value1'
+SeqRecord.annotations['Annotation_Key2'] = 'Annotation_Value2'
+print(SeqRecord)
+#%%
+*.
