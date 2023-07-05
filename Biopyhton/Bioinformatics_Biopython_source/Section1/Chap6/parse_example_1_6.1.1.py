@@ -1,4 +1,4 @@
-#6.1.1.parse_example_1.py 
+#6_1_1_parse_example_1.py
 
 from Bio import SeqIO 
 
